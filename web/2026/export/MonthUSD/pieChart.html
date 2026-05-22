@@ -5,18 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exportation Country by Month</title>
-    <link rel="stylesheet" href="/web/2026/import/MonthUSD/pieChart.css">
+    <link href="/web//home/style.css" rel="stylesheet">
 
 
 </head>
 
 <body>
-    <div class="pieChartcss">
-        <canvas id="pieChart"></canvas>
+
+    <div class="mainContainer">
+
+        <h1>Brazil ComexStat Dashboard</h1>
+
+        <h2>2026 Monthly Export Analysis</h2>
+
+        <div class="card">
+
+            <div class="chartContainer">
+
+                <canvas id="pieChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <button onclick="history.back()">
+            Back
+        </button>
+
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="/web/2026/import/MonthUSD/pieChart.js"></script>
-    </script>
+    <script src="pieChart.js"></script>
+
 </body>
 
 </html>

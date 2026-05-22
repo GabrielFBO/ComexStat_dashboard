@@ -8,7 +8,7 @@ const data = {
   labels: ['January', 'February', 'March', 'April'],
   datasets: [
     {
-      label: 'usd_value',
+      label: 'USD',
       data: [24530944420, 26167785416, 31704905652, 34148111644],
       backgroundColor: [
         'lightgreen',
@@ -25,21 +25,29 @@ const config = {
   type: 'pie',
   data: data,
   options: {
+
     responsive: true,
+
+    maintainAspectRatio: true,
+
     plugins: {
+
       legend: {
         labels: {
-          color: 'white',
-        },
-        position: 'top',
+          color: '#f1f5f9',
+          font: {
+            size: 14
+          }
+        }
       },
+
       title: {
         display: true,
-        text: 'Importation 2026 - Month',
         color: 'white'
       }
     }
-  },
-};
+  }
+}
+
 new Chart(ctx, config);
 

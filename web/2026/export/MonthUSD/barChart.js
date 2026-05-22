@@ -27,27 +27,27 @@ const config = {
   data: data,
   options: {
     scales: {
-      x: {
+
+    y: {
         ticks: {
-          color: 'white'
-        }, grid: {
-          color: 'white'
-        }, border: {
-          color: 'white'
-        }
-      },
-      y: {
-        ticks: {
-          color: 'white'
+            color: '#cbd5e1'
         },
+
         grid: {
-          color: 'white'
-        },
-        border: {
-          color: 'white'
+            color: 'rgba(255,255,255,0.08)'
         }
-      }
     },
+
+    x: {
+        ticks: {
+            color: '#cbd5e1'
+        },
+
+        grid: {
+            color: 'rgba(255,255,255,0.05)'
+        }
+    }
+},
     responsive: true,
     plugins: {
       legend: {

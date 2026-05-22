@@ -25,21 +25,28 @@ const config = {
   type: 'pie',
   data: data,
   options: {
+
     responsive: true,
+
+    maintainAspectRatio: true,
+
     plugins: {
+
       legend: {
         labels: {
-          color: 'white',
-        },
-        position: 'top',
+          color: '#f1f5f9',
+          font: {
+            size: 14
+          }
+        }
       },
+
       title: {
         display: true,
-        text: 'Importation 2026 - Month',
         color: 'white'
       }
     }
-  },
-};
+  }
+}
 new Chart(ctx, config);
 

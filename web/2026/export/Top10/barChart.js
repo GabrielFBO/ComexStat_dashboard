@@ -27,24 +27,24 @@ const config = {
   data: data,
   options: {
     scales: {
-      x: {
-        ticks: {
-          color: 'white'
-        }, grid: {
-          color: 'white'
-        }, border: {
-          color: 'white'
-        }
-      },
+
       y: {
         ticks: {
-          color: 'white'
+          color: '#cbd5e1'
         },
+
         grid: {
-          color: 'white'
+          color: 'rgba(255,255,255,0.08)'
+        }
+      },
+
+      x: {
+        ticks: {
+          color: '#cbd5e1'
         },
-        border: {
-          color: 'white'
+
+        grid: {
+          color: 'rgba(255,255,255,0.05)'
         }
       }
     },
