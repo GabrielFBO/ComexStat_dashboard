@@ -31,9 +31,9 @@ body {
 }
 
 .card {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 20px;
 
@@ -42,8 +42,8 @@ body {
     backdrop-filter: blur(10px);
 
     box-shadow:
-        0 0 30px rgba(0,0,0,0.4),
-        0 0 10px rgba(59,130,246,0.1);
+        0 0 30px rgba(0, 0, 0, 0.4),
+        0 0 10px rgba(59, 130, 246, 0.1);
 }
 
 .chartContainer {
@@ -92,7 +92,7 @@ button {
 button:hover {
     transform: translateY(-3px);
 
-    box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
 }
 
 .buttons {

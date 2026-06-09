@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importation by Month</title>
+    <link href="/web/home/style.css" rel="stylesheet">
+
+    
+</head>
+
+<body>
+
+    <div class="mainContainer">
+
+        <h1>Import Analysis</h1>
+
+        <div class="card">
+
+            <div class="filterContainer">
+
+                <h3>Select years to compare</h3>
+
+                <div class="yearSelector">
+
+                    <label><input type="checkbox" value="2022"> 2022</label>
+                    <label><input type="checkbox" value="2023"> 2023</label>
+                    <label><input type="checkbox" value="2024"> 2024</label>
+                    <label><input type="checkbox" value="2025"> 2025</label>
+                    <label><input type="checkbox" value="2026" checked> 2026</label>
+
+                </div>
+
+                <button id="updateChart">
+                    Update Chart
+                </button>
+
+            </div>
+
+            <div class="chartContainer">
+
+                <canvas id="barChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <button onclick="history.back()">
+            Back
+        </button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
