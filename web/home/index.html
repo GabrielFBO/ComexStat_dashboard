@@ -2,24 +2,53 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Brazil ComexStat</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <h1>Brazil ComexStat Dashboard</h1>
-    <h2>Compare, Analysis, Study</h2>
-    <h1>Export Operations</h1>
-    <div>
-        <button><a href="/web/operations/export/index.html">Bar Chart</a></button>
+
+    <div class="mainContainer">
+
+        <header class="hero">
+            <h1>Brazil ComexStat Dashboard</h1>
+            <p>Trade Intelligence • Analytics • Rankings</p>
+        </header>
+
+        <div class="dashboardGrid">
+            <div class="dashboardCard">
+
+                <h2>📦 Export Analysis</h2>
+
+                <p>Analyze exports by month, compare countries and create rankings.</p>
+
+                <a href="/web/operations/export/index.html" class="dashboardButton">
+                    Open Dashboard</a>
+
+            </div>
+
+            <div class="dashboardCard">
+
+                <h2>🚢 Import Analysis</h2>
+
+                <p>Analyze imports by month, compare countries and create rankings.</p>
+
+                <a href="/web/operations/import/index.html" class="dashboardButton">
+                    Open Dashboard</a>
+
+            </div>
+
+        </div>
+
     </div>
-    <h1>Import Operations</h1>
-    <div>
-        <button><a href="/web/operations/import/index.html">Bar Chart</a></button>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 
 </html>

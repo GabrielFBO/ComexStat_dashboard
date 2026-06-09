@@ -4,36 +4,99 @@
     box-sizing: border-box;
 }
 
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    h1 {
+
+        font-size: 2rem;
+
+    }
+
+    .top_mode_country {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .chartContainer {
+
+        max-width: 100%;
+
+    }
+
+    .backButton {
+
+        width: 100%;
+
+    }
+
+}
+
 body {
     min-height: 100vh;
-
     background:
         radial-gradient(circle at top left, #182848 0%, transparent 30%),
         radial-gradient(circle at bottom right, #0f3443 0%, transparent 30%),
         #0d1117;
 
     color: #f1f5f9;
-
     font-family: Inter, Arial, Helvetica, sans-serif;
-
     padding: 40px 20px;
 }
 
-.mainContainer {
-    width: 100%;
-    max-width: 1400px;
-
-    margin: auto;
-
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/web/images/brazil-flag.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.05);
+/* HOME */
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+/* HERO */
+.hero {
+
+    margin-bottom: 40px;
+
+}
+
+.hero p {
+
+    color: #94a3b8;
+
+    font-size: 1.1rem;
+
+    margin-top: 10px;
+
+}
+
+/* DASHBOARD */
+.dashboardGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(320px, 1fr));
+
+    gap: 30px;
+
+}
+
+.dashboardCard {
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
 
     border-radius: 20px;
 
@@ -41,6 +104,108 @@ body {
 
     backdrop-filter: blur(10px);
 
+    transition: .3s;
+
+}
+
+.dashboardCard:hover {
+
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(37, 99, 235, .4);
+
+}
+
+.dashboardCard p {
+
+    color: #94a3b8;
+
+    margin-top: 15px;
+
+    line-height: 1.5;
+
+}
+
+.dashboardButton {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background:
+        linear-gradient(135deg,
+            #2563eb,
+            #06b6d4);
+
+    padding: 14px 22px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+}
+
+.mainContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* IMPORT EXPORT */
+
+/* KPI */
+.kpiContainer {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(220px, 1fr));
+
+    gap: 20px;
+
+}
+
+.kpiCard {
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+}
+
+.kpiCard span {
+
+    color: #94a3b8;
+
+}
+
+.kpiCard h2 {
+
+    margin-top: 10px;
+
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
     box-shadow:
         0 0 30px rgba(0, 0, 0, 0.4),
         0 0 10px rgba(59, 130, 246, 0.1);
@@ -48,57 +213,64 @@ body {
 
 .chartContainer {
     width: 100%;
-    max-width: 700px;
-
+    max-width: 800px;
     margin: auto;
+}
+
+.top_mode_country {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(220px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: end;
+}
+
+.filterContainer {
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
 h1 {
     font-size: 2.5rem;
-
     color: white;
-
     margin-bottom: 10px;
 }
 
 h2 {
     color: #94a3b8;
-
     margin-bottom: 40px;
-
     font-weight: 400;
 }
 
-button {
+.backButton {
     background: linear-gradient(135deg, #2563eb, #06b6d4);
-
     color: white;
-
     border: none;
-
     padding: 14px 22px;
-
     border-radius: 12px;
-
     cursor: pointer;
-
     font-size: 1rem;
-
     font-weight: 600;
-
     transition: 0.3s ease;
 }
 
 button:hover {
     transform: translateY(-3px);
-
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
 }
 
 .buttons {
     display: flex;
     gap: 15px;
-
     flex-wrap: wrap;
 }
 

@@ -16,10 +16,96 @@
 
         <h1>Export Analysis</h1>
 
+        <div class="kpiContainer">
+
+            <div class="kpiCard">
+
+                <span>Total Exports</span>
+
+                <h2 id="totalUSD">
+                    ---
+                </h2>
+
+            </div>
+
+            <div class="kpiCard">
+
+                <span>Records</span>
+
+                <h2 id="records">
+                    ---
+                </h2>
+
+            </div>
+
+            <div class="kpiCard">
+
+                <span>Top Country</span>
+
+                <h2 id="topCountry">
+                    ---
+                </h2>
+
+            </div>
+
+        </div>
+
         <div class="card">
+            <div class="top_mode_country">
+                <div class="modeSelector">
 
-            <div class="filterContainer">
+                    <h3>Analysis Type</h3>
 
+                    <select id="chartMode">
+
+                        <option value="month">
+                            Monthly Analysis
+                        </option>
+
+                        <option value="ranking">
+                            Top Countries
+                        </option>
+
+                    </select>
+
+                </div>
+                <div id="countrySection1" class="countrySelector">
+
+                    <h3>Select a country</h3>
+
+                    <input list="countries" id="country1" placeholder="Type a country">
+
+                </div>
+
+                <div id="countrySection2" class="countrySelector">
+
+                    <h3>Select a country</h3>
+
+                    <input list="countries" id="country2" placeholder="Type a country">
+
+                </div>
+                <div id="topSection" class="topSelector">
+                    <h3>Top Ranking</h3>
+
+                    <select id="topN">
+
+                        <option value="5">Top 5</option>
+
+                        <option value="10" selected>
+                            Top 10
+                        </option>
+
+                        <option value="20">
+                            Top 20
+                        </option>
+
+                        <option value="30">
+                            Top 30
+                        </option>
+
+                    </select>
+
+                </div>
                 <div class="yearSelector">
                     <h3>Select years to compare</h3>
                     <label><input type="checkbox" value="2022"> 2022</label>
@@ -27,25 +113,14 @@
                     <label><input type="checkbox" value="2024"> 2024</label>
                     <label><input type="checkbox" value="2025"> 2025</label>
                     <label><input type="checkbox" value="2026" checked> 2026</label>
-
-                </div>
-                <div class="countrySelector">
-                    <h3>Select countries to compare</h3>
-                    <input list="countries" id="country1" placeholder="Type a country">
                     <datalist id="countries"></datalist>
                 </div>
-                <div class="countrySelector">
-                    <h3>Select countries to compare</h3>
-                    <input list="countries" id="country2" placeholder="Type a country">
-                    <datalist id="countries"></datalist>
-                </div><br>
-
-                <button id="updateChart">
-                    Update Chart
-                </button>
-
+                <div>
+                    <button class="filterContainer" id="updateChart">
+                        Update Chart
+                    </button>
+                </div>
             </div>
-
             <div class="chartContainer">
 
                 <canvas id="barChart"></canvas>
@@ -54,7 +129,7 @@
 
         </div>
 
-        <button onclick="history.back()">
+        <button class="backButton" onclick="history.back()">
             Back
         </button>
 
