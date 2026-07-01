@@ -6,105 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Importation by Month</title>
     <link href="/web/style.css" rel="stylesheet">
-
-
 </head>
-
 <body>
-
     <div class="mainContainer">
-
         <h1>Import Analysis</h1>
-
         <div class="kpiContainer">
-
             <div class="kpiCard">
-
                 <span>Total Imports</span>
-
                 <h2 id="totalUSD">
                     ---
                 </h2>
-
             </div>
-
             <div class="kpiCard">
-
                 <span>Trade Balance</span>
-
                 <h2 id="tradeBalance">
                     ---
                 </h2>
-
             </div>
-
             <div class="kpiCard">
-
                 <span>Top Country</span>
-
                 <h2 id="topCountry">
                     ---
                 </h2>
-
             </div>
-
         </div>
-
         <div class="card">
             <div class="top_mode_country">
                 <div class="modeSelector">
-
                     <h3>Analysis Type</h3>
-
                     <select id="chartMode">
-
                         <option value="month">
                             Monthly Analysis
                         </option>
-
                         <option value="ranking">
                             Top Countries
                         </option>
-
                     </select>
-
                 </div>
                 <div id="countrySection1" class="countrySelector">
-
                     <h3>Select a country</h3>
-
                     <input list="countries" id="country1" placeholder="Type a country">
-
                 </div>
-
                 <div id="countrySection2" class="countrySelector">
-
                     <h3>Select a country</h3>
-
                     <input list="countries" id="country2" placeholder="Type a country">
-
                 </div>
                 <div id="topSection" class="topSelector">
                     <h3>Top Ranking</h3>
-
                     <select id="topN">
-
                         <option value="5">Top 5</option>
-
                         <option value="10" selected>
                             Top 10
                         </option>
-
                         <option value="20">
                             Top 20
                         </option>
-
                         <option value="30">
                             Top 30
                         </option>
-
                     </select>
-
                 </div>
                 <div class="yearSelector">
                     <h3>Select years to compare</h3>
@@ -122,22 +82,14 @@
                 </div>
             </div>
             <div class="chartContainer">
-
                 <canvas id="barChart"></canvas>
-
             </div>
-
         </div>
-
         <button class="backButton" onclick="history.back()">
             Back
         </button>
-
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
-
+    <script src="/web/operations/import/script.js"></script>
 </body>
-
 </html>

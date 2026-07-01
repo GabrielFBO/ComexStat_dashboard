@@ -6,9 +6,7 @@ Promise.all([
     fetch("../../../../data/processed/import_month.json")
         .then(response => response.json())
 ])
-
     .then(([exportsData, importsData]) => {
-
         const months = [
             "Janeiro",
             "Fevereiro",
@@ -23,7 +21,6 @@ Promise.all([
             "Novembro",
             "Dezembro"
         ];
-
         const colors = [
             "#8c95f2",
             "#4ade80",
@@ -33,50 +30,31 @@ Promise.all([
             "#06b6d4",
             "#a855f7"
         ];
-
         // Lista de países
-
         const countries = [
             ...new Set(
                 exportsData.map(item => item.country_name)
             )
         ].sort();
-
         const datalist =
             document.getElementById("countries");
-
         countries.forEach(country => {
-
             const option =
                 document.createElement("option");
-
             option.value = country;
-
             datalist.appendChild(option);
-
         });
-
         // Função principal
-
         function buildChart() {
-
             const mode =
                 document.getElementById("chartMode").value;
-
             if (mode === "ranking") {
-
                 buildRankingChart();
-
             } else {
-
                 buildMonthChart();
-
             }
-
         }
-
         // Monthly Analysis
-
         function buildMonthChart() {
             const json =
                 window.location.pathname.includes("/export/")
@@ -85,22 +63,15 @@ Promise.all([
             const selectedYears = [...document.querySelectorAll(
                 ".yearSelector input:checked"
             )].map(item => Number(item.value));
-
             const selectedCountries = [
                 document.getElementById("country1").value,
                 document.getElementById("country2").value
             ].filter(country => country !== "");
-
             const datasets = [];
-
             // Sem país selecionado
-
             if (selectedCountries.length === 0) {
-
                 selectedYears.forEach((year, index) => {
-
                     const values = months.map(month => {
-
                         return exportsData
                             .filter(item =>
                                 item.year === year &&
@@ -108,133 +79,78 @@ Promise.all([
                             )
                             .reduce(
                                 (sum, item) => sum + item.total,
-                                0
+                               0
                             );
-
                     });
-
                     datasets.push({
-
                         label: String(year),
-
                         data: values,
-
                         backgroundColor:
                             colors[index % colors.length],
-
                         borderColor: "black",
-
                         borderWidth: 2,
-
                         borderRadius: 5
-
                     });
-
                 });
-
             }
-
             // Um país
-
             else if (selectedCountries.length === 1) {
-
                 const country =
                     selectedCountries[0];
-
                 selectedYears.forEach((year, index) => {
-
                     const values = months.map(month => {
-
                         const found = exportsData.find(item =>
-
                             item.year === year &&
                             item.month === month &&
                             item.country_name === country
-
                         );
-
                         return found ? found.total : 0;
-
                     });
-
                     datasets.push({
-
                         label: `${country} - ${year}`,
-
                         data: values,
-
                         backgroundColor:
                             colors[index % colors.length],
-
                         borderColor: "black",
-
                         borderWidth: 2,
-
                         borderRadius: 5
-
                     });
-
                 });
-
             }
-
             // Dois países
-
             else {
-
                 const selectedYear =
                     selectedYears[0] || 2026;
-
                 selectedCountries.forEach(
                     (country, index) => {
-
                         const values = months.map(month => {
-
                             const found = exportsData.find(item =>
-
                                 item.year === selectedYear &&
                                 item.month === month &&
                                 item.country_name === country
-
                             );
-
                             return found ? found.total : 0;
-
                         });
-
                         datasets.push({
-
                             label:
                                 `${country} (${selectedYear})`,
-
                             data: values,
-
                             backgroundColor:
                                 colors[index % colors.length],
-
                             borderColor: "black",
-
                             borderWidth: 2,
-
                             borderRadius: 5
-
                         });
-
                     }
                 );
-
             }
-
             createChart(
                 months,
                 datasets,
                 "Brazil Monthly Imports Comparison"
             );
-
         }
-
         // Ranking Analysis
-
         function buildRankingChart() {
             const json =
                 window.location.pathname.includes("/export/")
@@ -243,320 +159,183 @@ Promise.all([
             const selectedYears = [...document.querySelectorAll(
                 ".yearSelector input:checked"
             )].map(item => Number(item.value));
-
             const topN = Number(
                 document.getElementById("topN").value
             );
-
             const countryTotals = {};
-
             exportsData.forEach(item => {
-
                 if (
                     selectedYears.includes(item.year)
                 ) {
-
                     if (!countryTotals[item.country_name]) {
-
                         countryTotals[item.country_name] = 0;
-
                     }
-
                     countryTotals[item.country_name] +=
                         item.total;
-
                 }
-
             });
-
             const ranking = Object.entries(
                 countryTotals
             )
-
                 .map(([country, total]) => ({
                     country,
                     total
                 }))
-
                 .sort(
                     (a, b) => b.total - a.total
                 )
-
                 .slice(0, topN);
-
             const labels =
                 ranking.map(item => item.country);
-
             const values =
                 ranking.map(item => item.total);
-
             const datasets = [
-
                 {
-
                     label:
                         `Top ${topN} Countries`,
-
                     data: values,
-
                     backgroundColor: "#8c95f2",
-
                     borderColor: "black",
-
                     borderWidth: 2,
-
                     borderRadius: 5
-
                 }
-
             ];
-
             createChart(
-
                 labels,
-
                 datasets,
-
                 `Top ${topN} Import Destinations`
-
             );
-
         }
-
         function updateKPIs() {
-
             const selectedYears = [...document.querySelectorAll(
                 ".yearSelector input:checked"
             )].map(item => Number(item.value));
-
-            // ===========================
             // EXPORTS FILTRADOS
-            // ===========================
-
             const filteredExports = exportsData.filter(item =>
                 selectedYears.includes(item.year)
             );
-
-            // ===========================
             // IMPORTS FILTRADOS
-            // ===========================
-
             const filteredImports = importsData.filter(item =>
                 selectedYears.includes(item.year)
             );
-
-            // ===========================
             // DADOS DA PÁGINA ATUAL
-            // ===========================
-
             const currentData =
                 window.location.pathname.includes("/export/")
                     ? filteredExports
                     : filteredImports;
-
-            // ===========================
-            // KPI 1
-            // TOTAL USD
-            // ===========================
-
+            // KPI 1 TOTAL USD
             const totalUSD = currentData.reduce(
                 (sum, item) => sum + item.total,
                 0
             );
-
             document.getElementById("totalUSD").textContent =
                 "US$ " + totalUSD.toLocaleString();
-
-            // ===========================
-            // KPI 2
-            // TRADE BALANCE
-            // ===========================
-
+            // KPI 2 TRADE BALANCE
             const totalExports = filteredExports.reduce(
                 (sum, item) => sum + item.total,
                 0
             );
-
             const totalImports = filteredImports.reduce(
                 (sum, item) => sum + item.total,
                 0
             );
-
             const tradeBalance =
                 totalExports - totalImports;
-
             const balance =
                 document.getElementById("tradeBalance");
-
             if (tradeBalance >= 0) {
-
                 balance.textContent =
                     "US$ " +
                     tradeBalance.toLocaleString();
-
                 balance.style.color = "#4ade80";
-
             } else {
-
                 balance.textContent =
                     "-US$ " +
                     Math.abs(tradeBalance).toLocaleString();
-
                 balance.style.color = "#f43f5e";
-
             }
-
-            // ===========================
-            // KPI 3
-            // TOP COUNTRY
-            // ===========================
-
+            // KPI 3 TOP COUNTRY
             const countryTotals = {};
-
             currentData.forEach(item => {
-
                 if (!countryTotals[item.country_name]) {
-
                     countryTotals[item.country_name] = 0;
-
                 }
-
                 countryTotals[item.country_name] += item.total;
-
             });
-
             const ranking = Object.entries(countryTotals)
                 .sort((a, b) => b[1] - a[1]);
-
             document.getElementById("topCountry").textContent =
                 ranking.length > 0
                     ? ranking[0][0]
                     : "-";
-
         }
         function createChart(
             labels,
             datasets,
             title
         ) {
-
             if (chartInstance) {
-
                 chartInstance.destroy();
-
             }
-
             const ctx =
                 document.getElementById("barChart");
-
             chartInstance = new Chart(ctx, {
-
                 type: "bar",
-
                 data: {
-
                     labels,
-
                     datasets
-
                 },
-
                 options: {
-
                     responsive: true,
-
                     scales: {
-
                         y: {
-
                             ticks: {
-
                                 color: "#cbd5e1"
-
                             },
-
                             grid: {
-
                                 color:
                                     "rgba(255,255,255,0.08)"
-
                             }
-
                         },
-
                         x: {
-
                             ticks: {
-
                                 color: "#cbd5e1"
-
                             },
-
                             grid: {
-
                                 color:
                                     "rgba(255,255,255,0.05)"
-
                             }
-
                         }
-
                     },
-
                     plugins: {
-
                         legend: {
-
                             labels: {
-
                                 color: "white"
-
                             }
-
                         },
-
                         title: {
-
                             display: true,
-
                             color: "white",
-
                             text: title
-
                         }
-
                     }
-
                 }
-
             });
-
         }
-
         function updateFilters() {
-
             const mode =
                 document.getElementById("chartMode").value;
-
             const topSection =
                 document.getElementById("topSection");
-
             const countrySection1 =
                 document.getElementById("countrySection1");
-
             const countrySection2 =
                 document.getElementById("countrySection2");
-
             if (mode === "month") {
-
                 topSection.style.display = "none";
-
                 countrySection1.style.display = "block";
-
                 countrySection2.style.display = "block";
-
             }
-
             else {
 
                 topSection.style.display = "block";
@@ -564,35 +343,21 @@ Promise.all([
                 countrySection1.style.display = "none";
 
                 countrySection2.style.display = "none";
-
             }
-
         }
-
         updateFilters();
-
         function buildChart() {
-
             updateKPIs();
-
             const mode =
                 document.getElementById("chartMode").value;
-
             if (mode === "ranking") {
-
                 buildRankingChart();
-
             } else {
-
                 buildMonthChart();
-
             }
-
         }
-
         // cria gráfico inicial
         buildChart();
-
         // botão update
         document
             .getElementById("updateChart")
@@ -600,25 +365,17 @@ Promise.all([
                 "click",
                 buildChart
             );
-
         // troca de modo
         document
             .getElementById("chartMode")
             .addEventListener(
                 "change",
                 () => {
-
                     updateFilters();
-
                     buildChart();
-
                 }
             );
-
     })
-
     .catch(error => {
-
         console.error(error);
-
     });
