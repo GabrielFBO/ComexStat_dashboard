@@ -1,10 +1,13 @@
 let chartInstance = null;
 
-fetch("../../../../data/processed/import_month.json")
+Promise.all([
+    fetch("../../../../data/processed/export_month.json")
+        .then(response => response.json()),
+    fetch("../../../../data/processed/import_month.json")
+        .then(response => response.json())
+])
 
-    .then(response => response.json())
-
-    .then(json => {
+    .then(([exportsData, importsData]) => {
 
         const months = [
             "Janeiro",
@@ -35,7 +38,7 @@ fetch("../../../../data/processed/import_month.json")
 
         const countries = [
             ...new Set(
-                json.map(item => item.country_name)
+                exportsData.map(item => item.country_name)
             )
         ].sort();
 
@@ -75,7 +78,10 @@ fetch("../../../../data/processed/import_month.json")
         // Monthly Analysis
 
         function buildMonthChart() {
-
+            const json =
+                window.location.pathname.includes("/export/")
+                    ? exportsData
+                    : importsData;
             const selectedYears = [...document.querySelectorAll(
                 ".yearSelector input:checked"
             )].map(item => Number(item.value));
@@ -95,7 +101,7 @@ fetch("../../../../data/processed/import_month.json")
 
                     const values = months.map(month => {
 
-                        return json
+                        return exportsData
                             .filter(item =>
                                 item.year === year &&
                                 item.month === month
@@ -139,7 +145,7 @@ fetch("../../../../data/processed/import_month.json")
 
                     const values = months.map(month => {
 
-                        const found = json.find(item =>
+                        const found = exportsData.find(item =>
 
                             item.year === year &&
                             item.month === month &&
@@ -184,7 +190,7 @@ fetch("../../../../data/processed/import_month.json")
 
                         const values = months.map(month => {
 
-                            const found = json.find(item =>
+                            const found = exportsData.find(item =>
 
                                 item.year === selectedYear &&
                                 item.month === month &&
@@ -230,7 +236,10 @@ fetch("../../../../data/processed/import_month.json")
         // Ranking Analysis
 
         function buildRankingChart() {
-
+            const json =
+                window.location.pathname.includes("/export/")
+                    ? exportsData
+                    : importsData;
             const selectedYears = [...document.querySelectorAll(
                 ".yearSelector input:checked"
             )].map(item => Number(item.value));
@@ -241,7 +250,7 @@ fetch("../../../../data/processed/import_month.json")
 
             const countryTotals = {};
 
-            json.forEach(item => {
+            exportsData.forEach(item => {
 
                 if (
                     selectedYears.includes(item.year)
@@ -314,41 +323,97 @@ fetch("../../../../data/processed/import_month.json")
 
         }
 
-        // Função que cria o gráfico
         function updateKPIs() {
 
             const selectedYears = [...document.querySelectorAll(
                 ".yearSelector input:checked"
             )].map(item => Number(item.value));
 
-            // Filtra apenas os anos selecionados
+            // ===========================
+            // EXPORTS FILTRADOS
+            // ===========================
 
-            const filteredData = json.filter(item =>
+            const filteredExports = exportsData.filter(item =>
                 selectedYears.includes(item.year)
             );
 
-            // KPI 1 - Total USD
+            // ===========================
+            // IMPORTS FILTRADOS
+            // ===========================
 
-            const totalUSD = filteredData.reduce(
+            const filteredImports = importsData.filter(item =>
+                selectedYears.includes(item.year)
+            );
+
+            // ===========================
+            // DADOS DA PÁGINA ATUAL
+            // ===========================
+
+            const currentData =
+                window.location.pathname.includes("/export/")
+                    ? filteredExports
+                    : filteredImports;
+
+            // ===========================
+            // KPI 1
+            // TOTAL USD
+            // ===========================
+
+            const totalUSD = currentData.reduce(
                 (sum, item) => sum + item.total,
                 0
             );
 
-            document.getElementById("totalUSD")
-                .textContent =
+            document.getElementById("totalUSD").textContent =
                 "US$ " + totalUSD.toLocaleString();
 
-            // KPI 2 - Quantidade de registros
+            // ===========================
+            // KPI 2
+            // TRADE BALANCE
+            // ===========================
 
-            document.getElementById("records")
-                .textContent =
-                filteredData.length.toLocaleString();
+            const totalExports = filteredExports.reduce(
+                (sum, item) => sum + item.total,
+                0
+            );
 
-            // KPI 3 - Top Country
+            const totalImports = filteredImports.reduce(
+                (sum, item) => sum + item.total,
+                0
+            );
+
+            const tradeBalance =
+                totalExports - totalImports;
+
+            const balance =
+                document.getElementById("tradeBalance");
+
+            if (tradeBalance >= 0) {
+
+                balance.textContent =
+                    "US$ " +
+                    tradeBalance.toLocaleString();
+
+                balance.style.color = "#4ade80";
+
+            } else {
+
+                balance.textContent =
+                    "-US$ " +
+                    Math.abs(tradeBalance).toLocaleString();
+
+                balance.style.color = "#f43f5e";
+
+            }
+
+            // ===========================
+            // KPI 3
+            // TOP COUNTRY
+            // ===========================
 
             const countryTotals = {};
 
-            filteredData.forEach(item => {
+            currentData.forEach(item => {
 
                 if (!countryTotals[item.country_name]) {
 
@@ -361,15 +426,13 @@ fetch("../../../../data/processed/import_month.json")
             });
 
             const ranking = Object.entries(countryTotals)
-
                 .sort((a, b) => b[1] - a[1]);
 
-            document.getElementById("topCountry")
-                .textContent =
-
+            document.getElementById("topCountry").textContent =
                 ranking.length > 0
                     ? ranking[0][0]
                     : "-";
+
         }
         function createChart(
             labels,
