@@ -1,9 +1,9 @@
 let chartInstance = null;
 
 Promise.all([
-    fetch("../../../../data/processed/export_month.json")
+    fetch("/data/processed/export_month.json")
         .then(response => response.json()),
-    fetch("../../../../data/processed/import_month.json")
+    fetch("/data/processed/import_month.json")
         .then(response => response.json())
 ])
     .then(([exportsData, importsData]) => {
