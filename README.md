@@ -1,6 +1,6 @@
 # Brazil ComexStat Dashboard
 
-Brazil ComexStat Dashboard is a data visualization project focused on Brazilian import and export operations between 2022 and April 2026.
+Brazil ComexStat Dashboard is a data visualization project focused on Brazilian import and export operations between 2022 and May 2026.
 
 The project was developed to explore data analysis, SQL queries, JavaScript programming, and interactive dashboards using official Brazilian foreign trade data.
 
@@ -71,6 +71,7 @@ This project was developed as part of a personal learning journey in:
 
 ## Future Improvements
 
+* Portuguese, Spanish and English versions
 * Product (NCM) analysis
 * Trade balance indicators
 * Interactive maps
