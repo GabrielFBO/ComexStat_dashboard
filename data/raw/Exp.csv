@@ -1,224 +1,437 @@
 ﻿year,month,country_name,usd_value
-2026,Abril,Afeganistão,17220
-2026,Abril,Albânia,12767309
-2026,Abril,Alemanha,631464735
-2026,Abril,Angola,35189877
-2026,Abril,Anguilla,53285
-2026,Abril,Antártica,615
-2026,Abril,Antígua e Barbuda,2564074
-2026,Abril,Argentina,1266538951
-2026,Abril,Argélia,283548223
-2026,Abril,Armênia,944481
-2026,Abril,Aruba,4820358
-2026,Abril,Arábia Saudita,209881899
-2026,Abril,Austrália,57816467
-2026,Abril,Azerbaijão,3896585
-2026,Abril,Bahamas,25199519
-2026,Abril,Bangladesh,286354633
-2026,Abril,Barbados,2677039
-2026,Abril,Barein,4368592
-2026,Abril,Belarus,998325
-2026,Abril,Belize,1860134
-2026,Abril,Benin,11662673
-2026,Abril,Bermudas,2934332
-2026,Abril,Bolívia,125282667
-2026,Abril,Bonaire Saint Eustatius e Saba,280305
-2026,Abril,Botsuana,74725
-2026,Abril,Brasil,5062883
-2026,Abril,Brunei,87033
-2026,Abril,Bulgária,155502283
-2026,Abril,Burkina Faso,459892
-2026,Abril,Bélgica,306509274
-2026,Abril,Bósnia-Herzegovina,290488
-2026,Abril,Cabo Verde,3833398
-2026,Abril,Camarões,1642638
-2026,Abril,Camboja,4188269
-2026,Abril,Canadá,615007713
-2026,Abril,Catar,19591155
-2026,Abril,Cayman Ilhas,1488933
-2026,Abril,Cazaquistão,6039153
-2026,Abril,Chade,920838
-2026,Abril,Chile,499464066
 2026,Abril,China,11729731999
-2026,Abril,Chipre,8286032
-2026,Abril,Colômbia,390589842
-2026,Abril,Comores,286250
-2026,Abril,Congo,9618347
-2026,Abril,Congo República Democrática,22216473
-2026,Abril,Coreia do Sul,504721675
-2026,Abril,Costa Rica,34343829
-2026,Abril,Costa do Marfim,16578748
-2026,Abril,Coveite (Kuweit),13867264
-2026,Abril,Croácia,3640628
-2026,Abril,Cuba,27678465
-2026,Abril,Curaçao,5602572
-2026,Abril,Dinamarca,41675790
-2026,Abril,Djibuti,807128
-2026,Abril,Dominica,509971
-2026,Abril,Egito,243755856
-2026,Abril,El Salvador,14992077
-2026,Abril,Emirados Árabes Unidos,159981353
-2026,Abril,Equador,96173571
-2026,Abril,Eslováquia,2318169
-2026,Abril,Eslovênia,17122945
-2026,Abril,Espanha,823897028
+2026,Maio,China,10497429572
 2026,Abril,Estados Unidos,3159151009
-2026,Abril,Estônia,13801249
-2026,Abril,Etiópia,2621959
-2026,Abril,Faroe Ilhas,1855
-2026,Abril,Fiji,39299
-2026,Abril,Filipinas,215486124
-2026,Abril,Finlândia,59822966
-2026,Abril,França,353253000
-2026,Abril,Gabão,4526197
-2026,Abril,Gana,27032284
-2026,Abril,Geórgia,37097468
-2026,Abril,Geórgia do Sul e Sandwich do Sul Ilhas,5026
-2026,Abril,Gibraltar,83678
-2026,Abril,Granada,2202108
-2026,Abril,Groenlândia,15223
-2026,Abril,Grécia,52333987
-2026,Abril,Guadalupe,857364
-2026,Abril,Guam,15462
-2026,Abril,Guatemala,31957048
-2026,Abril,Guiana,35791660
-2026,Abril,Guiana Francesa,1670336
-2026,Abril,Guiné,23053114
-2026,Abril,Guiné Equatorial,2514622
-2026,Abril,Guiné-Bissau,429752
-2026,Abril,Gâmbia,26077504
-2026,Abril,Haiti,7825888
-2026,Abril,Heard e ilhas mcdonald Ilha,692269
-2026,Abril,Honduras,18382503
-2026,Abril,Hong Kong,118160751
-2026,Abril,Hungria,3548975
-2026,Abril,Ilha de Man,945123
-2026,Abril,Indonésia,525024553
-2026,Abril,Iraque,71050725
-2026,Abril,Irlanda,19667870
-2026,Abril,Irã,341649140
-2026,Abril,Islândia,20721538
-2026,Abril,Israel,49459784
-2026,Abril,Itália,584107482
-2026,Abril,Iêmen,16935316
-2026,Abril,Jamaica,9996974
-2026,Abril,Japão,561592474
-2026,Abril,Jordânia,45153133
-2026,Abril,Laos,1207778
-2026,Abril,Lesoto,2849
-2026,Abril,Letônia,9341933
-2026,Abril,Libéria,58344439
-2026,Abril,Liechtenstein,4512619
-2026,Abril,Lituânia,2979986
-2026,Abril,Luxemburgo,4880556
-2026,Abril,Líbano,54570352
-2026,Abril,Líbia,35126659
-2026,Abril,Macau,130905
-2026,Abril,Macedônia,3345341
-2026,Abril,Madagascar,1132227
-2026,Abril,Malavi,378276
-2026,Abril,Maldivas,2261291
-2026,Abril,Mali,379956
-2026,Abril,Malta,15439039
-2026,Abril,Malásia,154401993
-2026,Abril,Marrocos,50416943
-2026,Abril,Marshall Ilhas,36161229
-2026,Abril,Martinica,545757
-2026,Abril,Mauritânia,15056789
-2026,Abril,Maurício,5281049
-2026,Abril,Mayotte,178296
-2026,Abril,Mianmar,417238
-2026,Abril,Micronésia,28706
-2026,Abril,Moldávia,58783
-2026,Abril,Mongólia,340004
-2026,Abril,Montenegro,6050705
-2026,Abril,Montserrat,20161
-2026,Abril,Moçambique,1496831
-2026,Abril,México,744352662
-2026,Abril,Mônaco,585
-2026,Abril,Namíbia,3328436
-2026,Abril,Nepal,301114
-2026,Abril,Nicarágua,6236657
-2026,Abril,Nigéria,28660473
-2026,Abril,Noruega,116845441
-2026,Abril,Nova Caledônia,1921833
-2026,Abril,Nova Zelândia,7723090
-2026,Abril,Níger,109020
-2026,Abril,Omã,50242520
-2026,Abril,Palau,25849
-2026,Abril,Palestina,4808845
-2026,Abril,Panamá,240797778
-2026,Abril,Papua Nova Guiné,617231
-2026,Abril,Paquistão,255608940
-2026,Abril,Paraguai,318952054
-2026,Abril,Países Baixos (Holanda),1095367169
-2026,Abril,Peru,283659752
-2026,Abril,Polinésia Francesa,748030
-2026,Abril,Polônia,247374484
-2026,Abril,Porto Rico,20467736
-2026,Abril,Portugal,96739848
-2026,Abril,Quirguistão,92420
-2026,Abril,Quênia,6142967
-2026,Abril,Reino Unido,311014172
-2026,Abril,República Centro-Africana,536232
-2026,Abril,República Dominicana,55912299
-2026,Abril,Reunião,359810
-2026,Abril,Romênia,3817209
-2026,Abril,Ruanda,36925
-2026,Abril,Rússia,105505357
-2026,Abril,Salomão Ilhas,119485
-2026,Abril,Samoa,417363
-2026,Abril,San Marino,31555
-2026,Abril,Santa Lúcia,1074506
-2026,Abril,Seicheles,1248404
-2026,Abril,Senegal,21155187
-2026,Abril,Serra Leoa,4413380
+2026,Maio,Estados Unidos,3090027736
+2026,Maio,Argentina,1325725553
+2026,Abril,Argentina,1266538951
 2026,Abril,Singapura,1130657400
-2026,Abril,Sint Maarten,1430371
-2026,Abril,Somália,10399914
-2026,Abril,Sri Lanka,4254751
-2026,Abril,Sudão,15526481
-2026,Abril,Sudão do Sul,257184
-2026,Abril,Suriname,5359706
-2026,Abril,Suécia,60413333
-2026,Abril,Suíça,324236406
-2026,Abril,São Bartolomeu,77963
-2026,Abril,São Cristóvão e Névis,511997
-2026,Abril,São Martinho Ilha de (parte francesa),227947
-2026,Abril,São Tomé e Príncipe,118260
-2026,Abril,São Vicente e Granadinas,1271061
-2026,Abril,Sérvia,6271806
-2026,Abril,Síria,4976190
-2026,Abril,Tailândia,272379187
-2026,Abril,Taiwan (Formosa),206889933
-2026,Abril,Tanzânia,2584989
-2026,Abril,Tcheca República,11421626
-2026,Abril,Território Britânico do Oceano Índico,30417
-2026,Abril,Timor Leste,1199327
-2026,Abril,Togo,57204440
-2026,Abril,Tonga,834614
-2026,Abril,Toquelau,28440
-2026,Abril,Trinidad e Tobago,44595010
-2026,Abril,Tunísia,26174114
-2026,Abril,Turcas e Caicos Ilhas,193744
-2026,Abril,Turcomenistão,301368
-2026,Abril,Turquia,610361585
-2026,Abril,Ucrânia,5277727
-2026,Abril,Uganda,1145107
-2026,Abril,Uruguai,295911293
-2026,Abril,Uzbequistão,12380238
-2026,Abril,Vanuatu,406296
-2026,Abril,Vaticano,11648
-2026,Abril,Venezuela,63320784
-2026,Abril,Vietnã,406760354
-2026,Abril,Virgens Ilhas (Americanas),112468
-2026,Abril,Virgens Ilhas (Britânicas),240638
-2026,Abril,Wallis e Futuna Ilhas,5874
-2026,Abril,Zimbábue,450644
-2026,Abril,Zâmbia,331508
-2026,Abril,África do Sul,104596170
-2026,Abril,Áustria,9889203
+2026,Abril,Países Baixos (Holanda),1095367169
+2026,Maio,Países Baixos (Holanda),970773268
+2026,Maio,Espanha,879122731
+2026,Abril,Espanha,823897028
 2026,Abril,Índia,804603074
+2026,Maio,México,751879664
+2026,Abril,México,744352662
+2026,Maio,Índia,720149652
+2026,Maio,Alemanha,657392066
+2026,Abril,Alemanha,631464735
+2026,Abril,Canadá,615007713
+2026,Abril,Turquia,610361585
+2026,Abril,Itália,584107482
+2026,Maio,Canadá,583820599
+2026,Maio,Chile,575301542
+2026,Abril,Japão,561592474
+2026,Maio,Itália,559777351
+2026,Abril,Indonésia,525024553
+2026,Abril,Coreia do Sul,504721675
+2026,Abril,Chile,499464066
+2026,Maio,Turquia,477074149
+2026,Maio,Singapura,468203643
+2026,Maio,Japão,455675415
+2026,Maio,Peru,416582875
+2026,Abril,Vietnã,406760354
+2026,Abril,Colômbia,390589842
+2026,Maio,Bélgica,387605122
+2026,Maio,Portugal,360750014
+2026,Maio,Colômbia,359164998
+2026,Maio,França,358500019
+2026,Abril,França,353253000
+2026,Maio,Tailândia,352761301
+2026,Maio,Bangladesh,349027575
+2026,Maio,Paraguai,347862347
+2026,Maio,Reino Unido,345865105
+2026,Maio,Coreia do Sul,345045771
+2026,Abril,Irã,341649140
+2026,Maio,Vietnã,332034472
+2026,Maio,Indonésia,326004189
+2026,Abril,Suíça,324236406
+2026,Abril,Paraguai,318952054
+2026,Abril,Reino Unido,311014172
+2026,Abril,Bélgica,306509274
+2026,Abril,Uruguai,295911293
+2026,Abril,Bangladesh,286354633
+2026,Abril,Peru,283659752
+2026,Abril,Argélia,283548223
+2026,Maio,Arábia Saudita,282234001
+2026,Maio,Paquistão,273989180
+2026,Abril,Tailândia,272379187
+2026,Abril,Paquistão,255608940
+2026,Abril,Polônia,247374484
+2026,Abril,Egito,243755856
+2026,Maio,Suécia,242989457
+2026,Abril,Panamá,240797778
+2026,Maio,Argélia,224369223
+2026,Maio,Uruguai,223363812
+2026,Maio,Suíça,221181580
+2026,Abril,Filipinas,215486124
+2026,Abril,Arábia Saudita,209881899
+2026,Abril,Taiwan (Formosa),206889933
+2026,Maio,Egito,205755464
+2026,Maio,Emirados Árabes Unidos,188121938
+2026,Maio,Panamá,186356768
+2026,Maio,Rússia,166972775
+2026,Abril,Emirados Árabes Unidos,159981353
+2026,Maio,Filipinas,159791776
+2026,Abril,Bulgária,155502283
+2026,Abril,Malásia,154401993
+2026,Maio,Polônia,145226899
+2026,Maio,Taiwan (Formosa),129604973
+2026,Maio,Bolívia,128468803
+2026,Abril,Bolívia,125282667
+2026,Abril,Hong Kong,118160751
+2026,Maio,África do Sul,117855428
+2026,Abril,Noruega,116845441
+2026,Maio,Austrália,115272314
+2026,Maio,Irã,114959672
+2026,Maio,Hong Kong,111673390
+2026,Maio,Equador,109538010
+2026,Maio,Jordânia,109011449
+2026,Maio,Malásia,107542323
+2026,Abril,Rússia,105505357
+2026,Abril,África do Sul,104596170
+2026,Abril,Portugal,96739848
+2026,Maio,Noruega,96412706
+2026,Abril,Equador,96173571
+2026,Maio,Nigéria,92261871
+2026,Maio,Dinamarca,86748034
+2026,Maio,Marrocos,79943577
+2026,Maio,Venezuela,77701558
+2026,Abril,Iraque,71050725
+2026,Maio,Omã,66867922
+2026,Maio,República Dominicana,65781360
+2026,Maio,Líbano,65550408
+2026,Abril,Venezuela,63320784
+2026,Maio,Libéria,60861955
+2026,Abril,Suécia,60413333
+2026,Abril,Finlândia,59822966
+2026,Maio,Brasil,58549306
+2026,Abril,Libéria,58344439
+2026,Abril,Austrália,57816467
+2026,Abril,Togo,57204440
+2026,Abril,República Dominicana,55912299
+2026,Maio,Tunísia,54864762
+2026,Maio,Togo,54834293
+2026,Abril,Líbano,54570352
+2026,Abril,Grécia,52333987
+2026,Maio,Líbia,51380223
+2026,Abril,Marrocos,50416943
+2026,Abril,Omã,50242520
+2026,Abril,Israel,49459784
+2026,Maio,Eslovênia,48476215
+2026,Maio,Angola,48177779
+2026,Maio,Bermudas,47440799
+2026,Abril,Jordânia,45153133
+2026,Abril,Trinidad e Tobago,44595010
+2026,Abril,Dinamarca,41675790
+2026,Maio,Romênia,40811984
+2026,Maio,Marshall Ilhas,39619143
+2026,Abril,Geórgia,37097468
+2026,Abril,Marshall Ilhas,36161229
+2026,Abril,Guiana,35791660
+2026,Maio,Costa Rica,35531443
+2026,Maio,Iraque,35286758
+2026,Abril,Angola,35189877
+2026,Abril,Líbia,35126659
+2026,Abril,Costa Rica,34343829
+2026,Maio,Grécia,33998356
+2026,Maio,Iêmen,33318350
+2026,Abril,Guatemala,31957048
+2026,Maio,Guatemala,31421239
+2026,Maio,Israel,30977601
+2026,Maio,Montenegro,29849446
+2026,Maio,Gana,29397429
+2026,Maio,Finlândia,28705712
+2026,Abril,Nigéria,28660473
+2026,Abril,Cuba,27678465
+2026,Abril,Gana,27032284
+2026,Abril,Tunísia,26174114
+2026,Abril,Gâmbia,26077504
+2026,Abril,Bahamas,25199519
+2026,Maio,Cuba,23752606
+2026,Maio,Catar,23161473
+2026,Maio,Congo República Democrática,23060393
+2026,Abril,Guiné,23053114
+2026,Maio,Senegal,22971230
+2026,Abril,Congo República Democrática,22216473
+2026,Abril,Senegal,21155187
+2026,Abril,Islândia,20721538
+2026,Maio,Geórgia,20505372
+2026,Abril,Porto Rico,20467736
+2026,Abril,Irlanda,19667870
+2026,Abril,Catar,19591155
+2026,Maio,Bahamas,18846048
+2026,Maio,Virgens Ilhas (Britânicas),18516095
+2026,Abril,Honduras,18382503
+2026,Maio,Malta,17896888
+2026,Maio,Coveite (Kuweit),17602075
+2026,Maio,El Salvador,17512636
+2026,Abril,Eslovênia,17122945
+2026,Abril,Iêmen,16935316
+2026,Abril,Costa do Marfim,16578748
+2026,Maio,Trinidad e Tobago,16220395
+2026,Maio,Cazaquistão,15638138
+2026,Abril,Sudão,15526481
+2026,Maio,Nicarágua,15470938
+2026,Abril,Malta,15439039
+2026,Abril,Mauritânia,15056789
+2026,Maio,Estônia,15038553
+2026,Abril,El Salvador,14992077
+2026,Maio,Uzbequistão,14391324
+2026,Maio,Irlanda,14387132
+2026,Abril,Coveite (Kuweit),13867264
+2026,Abril,Estônia,13801249
+2026,Maio,Porto Rico,13790293
+2026,Abril,Albânia,12767309
+2026,Maio,Costa do Marfim,12765834
+2026,Maio,Guiné,12760894
+2026,Maio,Guiana,12691546
+2026,Abril,Uzbequistão,12380238
+2026,Maio,Honduras,11955302
+2026,Abril,Benin,11662673
+2026,Abril,Tcheca República,11421626
+2026,Maio,Chipre,10790509
+2026,Maio,Síria,10773672
+2026,Abril,Somália,10399914
+2026,Abril,Jamaica,9996974
+2026,Maio,Benin,9991923
+2026,Abril,Áustria,9889203
+2026,Abril,Congo,9618347
+2026,Abril,Letônia,9341933
+2026,Maio,Mauritânia,9322665
+2026,Maio,Albânia,9014954
+2026,Maio,Áustria,8752188
+2026,Maio,Nova Zelândia,8610840
+2026,Maio,Congo,8482372
+2026,Abril,Chipre,8286032
+2026,Abril,Haiti,7825888
+2026,Maio,Tcheca República,7797583
+2026,Abril,Nova Zelândia,7723090
+2026,Maio,Letônia,7627769
+2026,Maio,Croácia,7624783
+2026,Maio,Jamaica,7491871
+2026,Maio,Sri Lanka,7217749
+2026,Abril,Sérvia,6271806
+2026,Abril,Nicarágua,6236657
+2026,Abril,Quênia,6142967
+2026,Abril,Montenegro,6050705
+2026,Abril,Cazaquistão,6039153
+2026,Abril,Curaçao,5602572
+2026,Maio,Sérvia,5577635
+2026,Maio,Palestina,5416283
+2026,Abril,Suriname,5359706
+2026,Maio,Bulgária,5316633
+2026,Abril,Maurício,5281049
+2026,Abril,Ucrânia,5277727
+2026,Maio,Haiti,5081278
+2026,Maio,Quênia,5073799
+2026,Abril,Brasil,5062883
+2026,Abril,Síria,4976190
+2026,Abril,Luxemburgo,4880556
+2026,Abril,Aruba,4820358
+2026,Abril,Palestina,4808845
+2026,Maio,Tanzânia,4783296
+2026,Maio,Ucrânia,4758454
+2026,Maio,Serra Leoa,4650151
+2026,Maio,Cabo Verde,4590336
+2026,Abril,Gabão,4526197
+2026,Abril,Liechtenstein,4512619
+2026,Maio,Curaçao,4414122
+2026,Abril,Serra Leoa,4413380
+2026,Abril,Barein,4368592
+2026,Abril,Sri Lanka,4254751
+2026,Maio,Gabão,4247662
+2026,Abril,Camboja,4188269
+2026,Maio,Luxemburgo,4148209
+2026,Maio,Barein,3937110
+2026,Abril,Azerbaijão,3896585
+2026,Maio,Etiópia,3867694
+2026,Abril,Cabo Verde,3833398
+2026,Abril,Romênia,3817209
+2026,Abril,Croácia,3640628
+2026,Maio,Mianmar,3620509
+2026,Maio,Camarões,3607400
+2026,Maio,Suriname,3605838
+2026,Abril,Hungria,3548975
+2026,Abril,Macedônia,3345341
+2026,Abril,Namíbia,3328436
+2026,Maio,Camboja,3163294
+2026,Maio,Gâmbia,3106133
+2026,Maio,Lituânia,3097131
+2026,Maio,Aruba,3034354
+2026,Maio,Maurício,3019269
+2026,Abril,Lituânia,2979986
+2026,Abril,Bermudas,2934332
+2026,Abril,Barbados,2677039
+2026,Abril,Etiópia,2621959
+2026,Abril,Tanzânia,2584989
+2026,Abril,Antígua e Barbuda,2564074
+2026,Maio,Maldivas,2517333
+2026,Abril,Guiné Equatorial,2514622
+2026,Maio,Macedônia,2509237
+2026,Maio,Antígua e Barbuda,2498850
+2026,Maio,Moçambique,2435914
+2026,Abril,Eslováquia,2318169
+2026,Maio,Polinésia Francesa,2316132
+2026,Abril,Maldivas,2261291
+2026,Abril,Granada,2202108
+2026,Maio,Hungria,2198130
+2026,Maio,Eslováquia,2179865
+2026,Maio,Timor Leste,2123799
+2026,Abril,Nova Caledônia,1921833
+2026,Abril,Belize,1860134
+2026,Maio,Turcomenistão,1858719
+2026,Maio,Azerbaijão,1842442
+2026,Maio,Namíbia,1818783
+2026,Maio,Guiné Equatorial,1748176
+2026,Maio,Somália,1687410
+2026,Abril,Guiana Francesa,1670336
+2026,Abril,Camarões,1642638
+2026,Abril,Moçambique,1496831
+2026,Abril,Cayman Ilhas,1488933
+2026,Abril,Sint Maarten,1430371
+2026,Maio,Madagascar,1412142
+2026,Maio,Seicheles,1326386
+2026,Maio,Granada,1292023
+2026,Abril,São Vicente e Granadinas,1271061
+2026,Maio,Sint Maarten,1252809
+2026,Abril,Seicheles,1248404
+2026,Abril,Laos,1207778
+2026,Abril,Timor Leste,1199327
+2026,Abril,Uganda,1145107
+2026,Abril,Madagascar,1132227
+2026,Maio,Barbados,1099904
+2026,Maio,Uganda,1097484
+2026,Abril,Santa Lúcia,1074506
+2026,Maio,Belize,1056721
+2026,Maio,São Vicente e Granadinas,1016093
+2026,Abril,Belarus,998325
+2026,Abril,Ilha de Man,945123
+2026,Abril,Armênia,944481
+2026,Maio,Armênia,937974
+2026,Abril,Chade,920838
+2026,Abril,Guadalupe,857364
+2026,Abril,Tonga,834614
+2026,Abril,Djibuti,807128
+2026,Maio,República Centro-Africana,792678
+2026,Maio,Santa Lúcia,766919
+2026,Abril,Polinésia Francesa,748030
+2026,Maio,Bósnia-Herzegovina,714410
+2026,Maio,Nova Caledônia,707506
+2026,Maio,Guiné-Bissau,695872
+2026,Maio,Palau,694830
+2026,Abril,Heard e ilhas mcdonald Ilha,692269
+2026,Maio,Ilha de Man,653255
+2026,Maio,Malavi,647072
+2026,Abril,Papua Nova Guiné,617231
+2026,Maio,Chade,611609
+2026,Maio,Papua Nova Guiné,573936
+2026,Maio,Belarus,573176
+2026,Maio,Zâmbia,572096
+2026,Maio,Zimbábue,546949
+2026,Abril,Martinica,545757
+2026,Abril,República Centro-Africana,536232
+2026,Maio,Djibuti,533847
+2026,Abril,São Cristóvão e Névis,511997
+2026,Abril,Dominica,509971
+2026,Maio,Liechtenstein,507340
+2026,Maio,Bonaire Saint Eustatius e Saba,500839
+2026,Maio,Guadalupe,498965
+2026,Maio,Martinica,494856
+2026,Abril,Burkina Faso,459892
+2026,Maio,São Cristóvão e Névis,457721
+2026,Abril,Zimbábue,450644
+2026,Maio,Guiana Francesa,447878
+2026,Maio,Macau,437757
+2026,Abril,Guiné-Bissau,429752
+2026,Maio,Mayotte,429502
+2026,Abril,Samoa,417363
+2026,Abril,Mianmar,417238
+2026,Abril,Vanuatu,406296
+2026,Abril,Mali,379956
+2026,Abril,Malavi,378276
+2026,Maio,Sudão do Sul,367138
+2026,Maio,Gibraltar,366605
+2026,Abril,Reunião,359810
+2026,Maio,Dominica,356458
+2026,Maio,San Marino,340204
+2026,Abril,Mongólia,340004
+2026,Maio,Cayman Ilhas,336295
+2026,Maio,Reunião,332963
+2026,Abril,Zâmbia,331508
+2026,Maio,São Bartolomeu,324944
+2026,Abril,Turcomenistão,301368
+2026,Abril,Nepal,301114
+2026,Maio,Ruanda,299034
+2026,Maio,Tonga,297457
+2026,Abril,Bósnia-Herzegovina,290488
+2026,Abril,Comores,286250
+2026,Maio,Nepal,282391
+2026,Abril,Bonaire Saint Eustatius e Saba,280305
+2026,Maio,Samoa,269957
+2026,Abril,Sudão do Sul,257184
+2026,Maio,São Tomé e Príncipe,248192
+2026,Abril,Virgens Ilhas (Britânicas),240638
+2026,Maio,Burkina Faso,233719
+2026,Abril,São Martinho Ilha de (parte francesa),227947
+2026,Abril,Turcas e Caicos Ilhas,193744
+2026,Maio,Mongólia,193468
+2026,Maio,Laos,182737
+2026,Maio,Vanuatu,182401
+2026,Abril,Mayotte,178296
+2026,Maio,Cocos (Keeling) Ilhas,164723
+2026,Maio,Níger,160916
+2026,Maio,Mali,135153
+2026,Abril,Macau,130905
+2026,Maio,Guam,128147
+2026,Abril,Salomão Ilhas,119485
+2026,Abril,São Tomé e Príncipe,118260
+2026,Abril,Virgens Ilhas (Americanas),112468
+2026,Abril,Níger,109020
+2026,Maio,Kiribati,104461
+2026,Maio,Moldávia,92767
+2026,Abril,Quirguistão,92420
+2026,Abril,Brunei,87033
+2026,Abril,Gibraltar,83678
+2026,Maio,Anguilla,78770
+2026,Abril,São Bartolomeu,77963
+2026,Abril,Botsuana,74725
+2026,Maio,Fiji,62529
+2026,Maio,Botsuana,59481
+2026,Abril,Moldávia,58783
+2026,Abril,Anguilla,53285
+2026,Maio,São Martinho Ilha de (parte francesa),45035
+2026,Abril,Fiji,39299
+2026,Maio,Islândia,37476
+2026,Abril,Ruanda,36925
+2026,Abril,San Marino,31555
+2026,Abril,Território Britânico do Oceano Índico,30417
+2026,Abril,Micronésia,28706
+2026,Abril,Toquelau,28440
+2026,Maio,Quirguistão,26701
+2026,Abril,Palau,25849
+2026,Maio,Micronésia,24749
+2026,Maio,Montserrat,20915
+2026,Abril,Montserrat,20161
+2026,Abril,Afeganistão,17220
+2026,Abril,Guam,15462
+2026,Abril,Groenlândia,15223
+2026,Maio,Suazilândia,13425
+2026,Maio,Pacífico Ilhas do (EUA),12207
+2026,Abril,Vaticano,11648
+2026,Maio,Burundi,11082
+2026,Maio,Faroe Ilhas,6556
+2026,Abril,Wallis e Futuna Ilhas,5874
+2026,Maio,Virgens Ilhas (Americanas),5184
+2026,Abril,Geórgia do Sul e Sandwich do Sul Ilhas,5026
+2026,Abril,Lesoto,2849
+2026,Abril,Faroe Ilhas,1855
+2026,Maio,Turcas e Caicos Ilhas,1729
+2026,Maio,Tuvalu,1420
+2026,Abril,Antártica,615
+2026,Abril,Mônaco,585
+2026,Maio,Mônaco,34
+2026,Maio,Tadjiquistão,1
 2026,Março,Afeganistão,29068
 2026,Março,Albânia,15127244
 2026,Março,Alemanha,496944416
