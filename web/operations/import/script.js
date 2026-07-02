@@ -1,5 +1,7 @@
 let chartInstance = null;
 
+const PAGE_TYPE = "import"; 
+
 Promise.all([
     fetch("../../data/processed/export_month.json")
         .then(response => response.json()),
@@ -7,6 +9,8 @@ Promise.all([
         .then(response => response.json())
 ])
     .then(([exportsData, importsData]) => {
+            const json =
+            PAGE_TYPE === "export" ? exportsData : importsData;
         const months = [
             "Janeiro",
             "Fevereiro",
@@ -21,6 +25,20 @@ Promise.all([
             "Novembro",
             "Dezembro"
         ];
+        const monthsAbbr = [
+            "Jan",
+            "Fev",
+            "Mar",
+            "Abr",
+            "Mai",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Set",
+            "Out",
+            "Nov",
+            "Dez"
+        ];
         const colors = [
             "#8c95f2",
             "#4ade80",
@@ -33,7 +51,7 @@ Promise.all([
         // Lista de países
         const countries = [
             ...new Set(
-                exportsData.map(item => item.country_name)
+                json.map(item => item.country_name)
             )
         ].sort();
         const datalist =
@@ -56,10 +74,6 @@ Promise.all([
         }
         // Monthly Analysis
         function buildMonthChart() {
-            const json =
-                window.location.pathname.includes("/export/")
-                    ? exportsData
-                    : importsData;
             const selectedYears = [...document.querySelectorAll(
                 ".yearSelector input:checked"
             )].map(item => Number(item.value));
@@ -68,11 +82,13 @@ Promise.all([
                 document.getElementById("country2").value
             ].filter(country => country !== "");
             const datasets = [];
+            const barBorderWidth =
+                selectedYears.length > 3 ? 0 : 1;
             // Sem país selecionado
             if (selectedCountries.length === 0) {
                 selectedYears.forEach((year, index) => {
                     const values = months.map(month => {
-                        return exportsData
+                        return json
                             .filter(item =>
                                 item.year === year &&
                                 item.month === month
@@ -87,8 +103,8 @@ Promise.all([
                         data: values,
                         backgroundColor:
                             colors[index % colors.length],
-                        borderColor: "black",
-                        borderWidth: 2,
+                        borderColor: "rgba(0,0,0,0.4)",
+                        borderWidth: barBorderWidth,
                         borderRadius: 5
                     });
                 });
@@ -99,7 +115,7 @@ Promise.all([
                     selectedCountries[0];
                 selectedYears.forEach((year, index) => {
                     const values = months.map(month => {
-                        const found = exportsData.find(item =>
+                        const found = json.find(item =>
                             item.year === year &&
                             item.month === month &&
                             item.country_name === country
@@ -111,51 +127,52 @@ Promise.all([
                         data: values,
                         backgroundColor:
                             colors[index % colors.length],
-                        borderColor: "black",
-                        borderWidth: 2,
+
+                        borderColor: "rgba(0,0,0,0.4)",
+                        borderWidth: barBorderWidth,
                         borderRadius: 5
                     });
                 });
             }
             // Dois países
             else {
-                const selectedYear =
-                    selectedYears[0] || 2026;
                 selectedCountries.forEach(
                     (country, index) => {
                         const values = months.map(month => {
-                            const found = exportsData.find(item =>
-                                item.year === selectedYear &&
-                                item.month === month &&
-                                item.country_name === country
+                            return selectedYears.reduce(
+                                (sum, year) => {
+                                    const found = json.find(item =>
+                                        item.year === year &&
+                                        item.month === month &&
+                                        item.country_name === country
+                                    );
+                                    return sum + (found ? found.total : 0);
+                                },
+                                0
                             );
-                            return found ? found.total : 0;
                         });
                         datasets.push({
                             label:
-                                `${country} (${selectedYear})`,
+                                `${country} (${selectedYears.join(", ")})`,
                             data: values,
                             backgroundColor:
                                 colors[index % colors.length],
-                            borderColor: "black",
-                            borderWidth: 2,
+                            borderColor: "rgba(0,0,0,0.4)",
+                            borderWidth: 1,
                             borderRadius: 5
                         });
                     }
                 );
             }
             createChart(
-                months,
+                monthsAbbr,
                 datasets,
-                "Brazil Monthly Imports Comparison"
+                `Brazil Monthly ${PAGE_TYPE === "export" ? "Exports" : "Imports"} Comparison`,
+                { rotate: true, autoSkip: false }
             );
         }
-        // Ranking Analysis
+        // Ranking
         function buildRankingChart() {
-            const json =
-                window.location.pathname.includes("/export/")
-                    ? exportsData
-                    : importsData;
             const selectedYears = [...document.querySelectorAll(
                 ".yearSelector input:checked"
             )].map(item => Number(item.value));
@@ -163,7 +180,7 @@ Promise.all([
                 document.getElementById("topN").value
             );
             const countryTotals = {};
-            exportsData.forEach(item => {
+            json.forEach(item => {
                 if (
                     selectedYears.includes(item.year)
                 ) {
@@ -195,15 +212,16 @@ Promise.all([
                         `Top ${topN} Countries`,
                     data: values,
                     backgroundColor: "#8c95f2",
-                    borderColor: "black",
-                    borderWidth: 2,
+                    borderColor: "rgba(0,0,0,0.4)",
+                    borderWidth: 1,
                     borderRadius: 5
                 }
             ];
             createChart(
                 labels,
                 datasets,
-                `Top ${topN} Import Destinations`
+                `Top ${topN} ${PAGE_TYPE === "export" ? "Export Destinations" : "Import Origins"}`,
+                { rotate: true, autoSkip: true }
             );
         }
         function updateKPIs() {
@@ -220,9 +238,9 @@ Promise.all([
             );
             // DADOS DA PÁGINA ATUAL
             const currentData =
-                window.location.pathname.includes("/export/")
-                    ? filteredExports
-                    : filteredImports;
+                json.filter(item =>
+                    selectedYears.includes(item.year)
+                );
             // KPI 1 TOTAL USD
             const totalUSD = currentData.reduce(
                 (sum, item) => sum + item.total,
@@ -272,7 +290,8 @@ Promise.all([
         function createChart(
             labels,
             datasets,
-            title
+            title,
+            { rotate = false, autoSkip = false } = {}
         ) {
             if (chartInstance) {
                 chartInstance.destroy();
@@ -287,11 +306,19 @@ Promise.all([
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRation: false,
+                    maintainAspectRatio: false,
                     scales: {
                         y: {
                             ticks: {
-                                color: "#cbd5e1"
+                                color: "#cbd5e1",
+                                callback: value =>
+                                    (value / 1_000_000_000)
+                                        .toLocaleString("en-US")
+                            },
+                            title: {
+                                display: true,
+                                text: "USD (Billions)",
+                                color: "#94a3b8"
                             },
                             grid: {
                                 color:
@@ -301,9 +328,12 @@ Promise.all([
                         x: {
                             ticks: {
                                 color: "#cbd5e1",
-                                maxRotation: 35,
-                                minRotation: 35,
-                                autoSkip: true
+                                maxRotation: rotate ? 60 : 0,
+                                minRotation: rotate ? 60 : 0,
+                                autoSkip: autoSkip,
+                                font: {
+                                    size: window.innerWidth < 480 ? 9 : 12
+                                }
                             },
                             grid: {
                                 color:
@@ -327,6 +357,15 @@ Promise.all([
                             font: {
                                 size: window.innerWidth < 768 ? 11 : 14
                             }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: context => {
+                                    const billions =
+                                        context.parsed.y / 1_000_000_000;
+                                    return `${context.dataset.label}: US$ ${billions.toLocaleString("en-US", { maximumFractionDigits: 2 })}B`;
+                                }
+                            }
                         }
                     }
                 }
@@ -347,11 +386,8 @@ Promise.all([
                 countrySection2.style.display = "block";
             }
             else {
-
                 topSection.style.display = "block";
-
                 countrySection1.style.display = "none";
-
                 countrySection2.style.display = "none";
             }
         }
@@ -366,7 +402,7 @@ Promise.all([
                 buildMonthChart();
             }
         }
-        // cria gráfico inicial
+        // gráfico inicial
         buildChart();
         // botão update
         document

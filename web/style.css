@@ -131,28 +131,53 @@ body::before {
     box-shadow:
         0 0 30px rgba(0, 0, 0, 0.4),
         0 0 10px rgba(59, 130, 246, 0.1);
+    min-width: 0;
 }
 
 .chartContainer {
     width: 100%;
-    max-width: 800px;
-    margin: auto;
+    height: 420px;
     position: relative;
-    height: 500px;
+    min-width: 0;
+    min-height: 0;
+}
+
+.chartContainer canvas {
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 24px 12px;
+    }
+
     h1 {
         font-size: 2rem;
     }
 
+    .card {
+        padding: 16px;
+    }
+
     .top_mode_country {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .chartContainer {
-        max-width: 100%;
-        height: 340px;
+        width: 100%;
+        height: 300px;
+    }
+
+    #country1,
+    #country2,
+    #chartMode,
+    #topN {
+        width: 100%;
+    }
+
+    .filterContainer {
+        width: 100%;
     }
 
     .backButton {
@@ -215,9 +240,4 @@ button:hover {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-}
-
-canvas {
-    width: 100% !important;
-    height: auto !important;
 }
