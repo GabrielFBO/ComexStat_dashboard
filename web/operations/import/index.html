@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Importation by Month</title>
+    <title>Importação Mensal</title>
     <link href="../../style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
     <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
@@ -15,22 +15,22 @@
 
 <body>
     <div class="mainContainer">
-        <h1>Import Analysis</h1>
+        <h1>Análise de Importação</h1>
         <div class="kpiContainer">
             <div class="kpiCard">
-                <span>Total Imports</span>
+                <span>Total de Importações</span>
                 <h2 id="totalUSD">
                     ---
                 </h2>
             </div>
             <div class="kpiCard">
-                <span>Trade Balance</span>
+                <span>Balança Comercial</span>
                 <h2 id="tradeBalance">
                     ---
                 </h2>
             </div>
             <div class="kpiCard">
-                <span>Top Country</span>
+                <span>Principal País</span>
                 <h2 id="topCountry">
                     ---
                 </h2>
@@ -39,26 +39,26 @@
         <div class="card">
             <div class="top_mode_country">
                 <div class="modeSelector">
-                    <h3>Analysis Type</h3>
+                    <h3>Tipo de Análise</h3>
                     <select id="chartMode">
                         <option value="month">
-                            Monthly Analysis
+                            Análise Mensal
                         </option>
                         <option value="ranking">
-                            Top Countries
+                            Ranking de Países
                         </option>
                     </select>
                 </div>
                 <div id="countrySection1" class="countrySelector">
-                    <h3>Select a country</h3>
-                    <input list="countries" id="country1" placeholder="Type a country">
+                    <h3>Selecione um país</h3>
+                    <input list="countries" id="country1" placeholder="Digite um país">
                 </div>
                 <div id="countrySection2" class="countrySelector">
-                    <h3>Select a country</h3>
-                    <input list="countries" id="country2" placeholder="Type a country">
+                    <h3>Selecione um país</h3>
+                    <input list="countries" id="country2" placeholder="Digite um país">
                 </div>
                 <div id="topSection" class="topSelector">
-                    <h3>Top Ranking</h3>
+                    <h3>Ranking</h3>
                     <select id="topN">
                         <option value="5">Top 5</option>
                         <option value="10" selected>
@@ -73,7 +73,7 @@
                     </select>
                 </div>
                 <div class="yearSelector">
-                    <h3>Select years to compare</h3>
+                    <h3>Selecione os anos para comparar</h3>
                     <label><input type="checkbox" value="2022"> 2022</label>
                     <label><input type="checkbox" value="2023"> 2023</label>
                     <label><input type="checkbox" value="2024"> 2024</label>
@@ -83,7 +83,7 @@
                 </div>
                 <div>
                     <button class="filterContainer" id="updateChart">
-                        Update Chart
+                        Atualizar Gráfico
                     </button>
                 </div>
             </div>
@@ -92,7 +92,7 @@
             </div>
         </div>
         <button class="backButton" onclick="history.back()">
-            Back
+            Voltar
         </button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
