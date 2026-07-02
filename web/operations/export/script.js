@@ -169,7 +169,7 @@ Promise.all([
             createChart(
                 monthsAbbr,
                 datasets,
-                `Brazil Monthly ${PAGE_TYPE === "export" ? "Exports" : "Imports"} Comparison`,
+                `${PAGE_TYPE === "export" ? "Exportação" : "Importação"} Mensal`,
                 { rotate: true, autoSkip: false }
             );
         }
@@ -211,7 +211,7 @@ Promise.all([
             const datasets = [
                 {
                     label:
-                        `Top ${topN} Countries`,
+                        `USD (Bilhões)`,
                     data: values,
                     backgroundColor: "#8c95f2",
                     borderColor: "rgba(0,0,0,0.4)",
@@ -222,7 +222,7 @@ Promise.all([
             createChart(
                 labels,
                 datasets,
-                `Top ${topN} ${PAGE_TYPE === "export" ? "Export Destinations" : "Import Origins"}`,
+                `Top ${topN} ${PAGE_TYPE === "export" ? "Países destino de exportação" : "Países de origem de importação"}`,
                 { rotate: true, autoSkip: true }
             );
         }
@@ -315,11 +315,11 @@ Promise.all([
                                 color: "#cbd5e1",
                                 callback: value =>
                                     (value / 1_000_000_000)
-                                        .toLocaleString("en-US")
+                                        .toLocaleString("pt-BR")
                             },
                             title: {
                                 display: true,
-                                text: "USD (Billions)",
+                                text: "USD (Bilhões)",
                                 color: "#94a3b8"
                             },
                             grid: {
@@ -365,7 +365,7 @@ Promise.all([
                                 label: context => {
                                     const billions =
                                         context.parsed.y / 1_000_000_000;
-                                    return `${context.dataset.label}: US$ ${billions.toLocaleString("en-US", { maximumFractionDigits: 2 })}B`;
+                                    return `${context.dataset.label}: US$ ${billions.toLocaleString("pt-BR", { maximumFractionDigits: 2 })}B`;
                                 }
                             }
                         }
