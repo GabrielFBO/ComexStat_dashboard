@@ -220,7 +220,7 @@ Promise.all([
             createChart(
                 labels,
                 datasets,
-                `Top ${topN} ${PAGE_TYPE === "export" ? "Países destino de exportação" : "Países de origem de importação"}`,
+                `Top ${topN} ${PAGE_TYPE === "export" ? "Países destino de exportação" : "Países origem de importação"}`,
                 { rotate: true, autoSkip: true }
             );
         }
