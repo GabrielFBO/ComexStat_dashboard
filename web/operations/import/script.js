@@ -79,7 +79,7 @@ Promise.all([
                             )
                             .reduce(
                                 (sum, item) => sum + item.total,
-                               0
+                                0
                             );
                     });
                     datasets.push({
@@ -287,6 +287,7 @@ Promise.all([
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRation: false,
                     scales: {
                         y: {
                             ticks: {
@@ -299,7 +300,10 @@ Promise.all([
                         },
                         x: {
                             ticks: {
-                                color: "#cbd5e1"
+                                color: "#cbd5e1",
+                                maxRotation: 35,
+                                minRotation: 35,
+                                autoSkip: true
                             },
                             grid: {
                                 color:
@@ -310,13 +314,19 @@ Promise.all([
                     plugins: {
                         legend: {
                             labels: {
-                                color: "white"
+                                color: "white",
+                                font: {
+                                    size: window.innerWidth < 768 ? 11 : 14
+                                }
                             }
                         },
                         title: {
                             display: true,
                             color: "white",
-                            text: title
+                            text: title,
+                            font: {
+                                size: window.innerWidth < 768 ? 11 : 14
+                            }
                         }
                     }
                 }
